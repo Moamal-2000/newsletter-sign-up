@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useState } from "react";
+import "./App.css";
+import SignUpForm from "./Components/SignUpForm";
+import ThankYou from "./Components/ThankYou";
+
+export const emailValidationContext = createContext();
 
 function App() {
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [subscribeEmail, setSubscribeEmail] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <emailValidationContext.Provider
+        value={{
+          isEmailValid,
+          setIsEmailValid,
+          subscribeEmail,
+          setSubscribeEmail,
+        }}
+      >
+        {isEmailValid ? <ThankYou /> : <SignUpForm />}
+      </emailValidationContext.Provider>
     </div>
   );
 }
