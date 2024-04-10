@@ -13,12 +13,12 @@ body {
 }
 
 :root {
-  --tomato: hsl(4, 100%, 67%);
-  --green-color: hsl(120, 73%, 41%);
-  --dark-slate-grey: hsl(234, 29%, 20%);
-  --charcoal-grey: hsl(235, 18%, 26%);
-  --grey: hsl(231, 7%, 60%);
-  --white: hsl(0, 0%, 100%);
+  --tomato: #ff6257;
+  --green-color: #1cb51c;
+  --dark-slate-grey: #242742;
+  --charcoal-grey: #36384e;
+  --grey: #9294a0;
+  --white: #ffffff;
 }
 
 p {
