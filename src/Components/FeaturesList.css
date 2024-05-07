@@ -1,0 +1,15 @@
+.sign-up form .list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sign-up form .list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sign-up form .list li p {
+  color: var(--dark-slate-grey);
+}

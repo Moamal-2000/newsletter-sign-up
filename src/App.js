@@ -1,26 +1,15 @@
-import { createContext, useState } from "react";
 import "./App.css";
 import SignUpForm from "./Components/SignUpForm";
 import ThankYou from "./Components/ThankYou";
-
-export const emailValidationContext = createContext();
+import { useEmailContext } from "./Context/emailContext";
 
 function App() {
-  const [isEmailValid, setIsEmailValid] = useState(false);
-  const [subscribeEmail, setSubscribeEmail] = useState("");
+  const { isEmailValid } = useEmailContext();
 
   return (
     <div className="App">
-      <emailValidationContext.Provider
-        value={{
-          isEmailValid,
-          setIsEmailValid,
-          subscribeEmail,
-          setSubscribeEmail,
-        }}
-      >
-        {isEmailValid ? <ThankYou /> : <SignUpForm />}
-      </emailValidationContext.Provider>
+      {isEmailValid && <ThankYou />}
+      {!isEmailValid && <SignUpForm />}
     </div>
   );
 }
