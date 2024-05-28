@@ -1,4 +1,3 @@
-import "./App.css";
 import SignUpForm from "./Components/SignUpForm";
 import ThankYou from "./Components/ThankYou";
 import { useEmailContext } from "./Context/emailContext";

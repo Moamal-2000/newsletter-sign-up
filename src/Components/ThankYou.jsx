@@ -1,4 +1,5 @@
 import { useEmailContext } from "../Context/emailContext";
+import iconSuccess from "../images/icon-success.svg";
 import "./ThankYou.css";
 
 const ThankYou = () => {
@@ -6,10 +7,7 @@ const ThankYou = () => {
 
   return (
     <div className="thank-you">
-      <img
-        src={require("../images/icon-success.svg").default}
-        alt="success icon"
-      />
+      <img src={iconSuccess} alt="success icon" />
       <h2>
         Thanks for <br /> subscribing
       </h2>
